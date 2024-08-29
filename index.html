@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body><div class="weather-app">
+    <div class="container">
+    <h3 class="brand">My Weather</h3>
+        <div>
+        <h1 class="temp">16°</h1>
+        <div class="city-time">
+        <h1 class="name">Coimbatore</h1>
+        <small>
+            <span class="time">06:09</span>
+            <span class="date"> Monday Sep 19 </span>
+        </small>
+        </div>
+        <div class="weather">
+        <img src="D:\weather html project\icons\sun.png" class="icon" alt="icon"width="50"height="50"/>
+        <span class="condition">Cloudy</span>
+        </div>
+      </div>
+     </div>
+    <div class="panel">
+        <form id="locationInput">
+          <input type="text" class="search" placeholder="Search Location..."/>
+            <button type="submit" class="submit">
+                <img src="D:\weather html project\icons\search.png" class="icon" alt="icon"width="35"height="35"/>
+            </button>
+        </form>
+        <ul class="cities">
+            <li class="city">Seoul</li>
+            <li class="city">Toronto</li>
+            <li class="city">Paris</li>
+             <li class="city">Tokyo</li>
+        </ul>
+    
+        <ul class="details">
+            <h4>Weather Details</h4>
+            <li>
+              <span>Cloudy</span>
+              <span class="cloud">89%</span>
+            </li>
+            <li>
+               <span>Humidity</span>
+               <span class="humidity">64%</span>
+            </li>
+            <li>
+               <span>Wind</span>
+               <span class="wind">8km/h</span>
+            </li>
+        </ul>
+    
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
