@@ -14,7 +14,7 @@ h1, h3 {
  
 .weather-app {    
     min-height: 100vh;
-    background-image: `url("D:/weather html project/images/daycloudy.jpg")`;
+    background-image: `url("./images/daycloudy.jpg")`;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
