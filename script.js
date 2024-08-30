@@ -15,7 +15,6 @@ const cities = document.querySelectorAll('.city');
 const locationIcon = document.querySelector('.weather-icon');
 
 let cityInput = "Coimbatore";
-let api_key=""
 
 cities.forEach((city) => {
   city.addEventListener('click', (e) => {
@@ -46,7 +45,6 @@ function dayOfTheWeek(day, month, year) {
 
 function fetchWeatherData() {
   fetch(`http://api.weatherapi.com/v1/current.json?key=e26473e7e8cd468e8e365839242707&q=${cityInput}`)
-
     .then(response => {
       if (!response.ok) {
         throw new Error('City not found');
@@ -70,8 +68,7 @@ function fetchWeatherData() {
 
       nameOutput.innerHTML = data.location.name;
 
-      const iconId = data.current.condition.icon.substr(
-        "//cdn.weather.com/weather/64x64/".length);
+      const iconId = data.current.condition.icon.substr("//cdn.weather.com/weather/64x64/".length);
       
       cloudOutput.innerHTML = data.current.cloud + "%";
       humidityOutput.innerHTML = data.current.humidity + "%";
@@ -84,20 +81,20 @@ function fetchWeatherData() {
       }
 
       if (code == 1000) {
-        app.style.backgroundImage = `url("D:/weather html project/images/dayclear.jpg")`;
+        app.style.backgroundImage = `url("./images/dayclear.jpg")`;
         btn.style.background = "#e5ba92";
         if (timeOfDay == "night") {
-          app.style.backgroundImage = `url("D:/weather html project/images/nytclear.jpg")`;
+          app.style.backgroundImage = `url("./images/nytclear.jpg")`;
           btn.style.background = "#181e27";
         }
       } else if (
         code == 1003 || code == 1006 || code == 1009 || code == 1030 || code == 1069 || code == 1087 ||
         code == 1135 || code == 1273 || code == 1276 || code == 1279 || code == 1282
       ) {
-        app.style.backgroundImage = `url("D:/weather html project/images/daycloudy.jpg")`;
+        app.style.backgroundImage = `url("./images/daycloudy.jpg")`;
         btn.style.background = "#fa6d1b";
         if (timeOfDay == "night") {
-          app.style.backgroundImage = `url("D:/weather html project/images/nytcloudy.jpg")`;
+          app.style.backgroundImage = `url("./images/nytcloudy.jpg")`;
           btn.style.background = "#181e27";
         }
       } else if (
@@ -105,17 +102,17 @@ function fetchWeatherData() {
         code == 1183 || code == 1186 || code == 1189 || code == 1192 || code == 1195 || code == 1204 ||
         code == 1207 || code == 1240 || code == 1243 || code == 1246 || code == 1249 || code == 1252
       ) {
-        app.style.backgroundImage = `url("D:/weather html project/images/dayrain.jpg")`;
+        app.style.backgroundImage = `url("./images/dayrain.jpg")`;
         btn.style.background = "#647d75";
         if (timeOfDay == "night") {
-          app.style.backgroundImage= `url("D:/weather html project/images/nytrain.jpg")`;
+          app.style.backgroundImage = `url("./images/nytrain.jpg")`;
           btn.style.background = "#325c80";
         }
       } else {
-        app.style.backgroundImage = `url("D:/weather html project/images/daysnow.jpg")`;
+        app.style.backgroundImage = `url("./images/daysnow.jpg")`;
         btn.style.background = "#4d72aa";
         if (timeOfDay == "night") {
-          app.style.backgroundImage = `url("D:/weather html project/images/nytsnow.jpg")`;
+          app.style.backgroundImage = `url("./images/nytsnow.jpg")`;
           btn.style.background = "#1b1b1b";
         }
       }
