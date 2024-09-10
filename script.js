@@ -50,7 +50,7 @@ function dayOfTheWeek(day, month, year) {
 
 // Function to fetch weather data from the API
 function fetchWeatherData() {
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityInput}`)
+  fetch(`http://api.weatherapi.com/v1/current.json?key=${e26473e7e8cd468e8e365839242707}&q=${cityInput}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('City not found');
